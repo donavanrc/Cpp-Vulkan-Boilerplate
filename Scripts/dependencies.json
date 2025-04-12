@@ -1,0 +1,34 @@
+{
+    "dependencies": [
+        {
+            "name": "glfw",
+            "type": "git",
+            "url": "https://github.com/glfw/glfw.git",
+            "revision": "3.4"
+        },
+        {
+            "name": "glm",
+            "type": "git",
+            "url": "https://github.com/g-truc/glm",
+            "revision": "1.0.1"
+        },
+        {
+            "name": "bunny",
+            "type": "archive",
+            "url": "https://casual-effects.com/g3d/data10/research/model/bunny/bunny.zip",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+        },
+        {
+            "name": "Bricks097_1K",
+            "type": "archive",
+            "url": "https://ambientcg.com/get?file=Bricks097_1K-JPG.zip",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+        },
+        {
+            "name": "DayEnvironmentHDRI057_4K",
+            "type": "archive",
+            "url": "https://ambientcg.com/get?file=DayEnvironmentHDRI057_4K-TONEMAPPED.jpg",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+        }
+    ]
+}
