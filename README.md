@@ -14,7 +14,7 @@ A basic Vulkan application template written in C++.
 ## Dependencies installation
 
 ```bash
-Scripts\bootstrap.py
+python Scripts/bootstrap.py
 ```
 
 ## Project building

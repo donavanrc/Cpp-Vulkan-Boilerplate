@@ -13,22 +13,37 @@
             "revision": "1.0.1"
         },
         {
+            "name": "vulkan",
+            "type": "git",
+            "url": "https://github.com/KhronosGroup/Vulkan-Headers",
+            "revision": "v1.4.310"
+        },
+        {
+            "name": "glslang",
+            "type": "git",
+            "url": "https://github.com/KhronosGroup/glslang",
+            "revision": "15.1.0"
+        },
+        {
+            "name": "stb",
+            "type": "git",
+            "url": "https://github.com/nothings/stb",
+            "revision": "master"
+        },
+        {
             "name": "bunny",
-            "type": "archive",
-            "url": "https://casual-effects.com/g3d/data10/research/model/bunny/bunny.zip",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+            "type": "asset",
+            "url": "https://casual-effects.com/g3d/data10/research/model/bunny/bunny.zip"
         },
         {
             "name": "Bricks097_1K",
-            "type": "archive",
-            "url": "https://ambientcg.com/get?file=Bricks097_1K-JPG.zip",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+            "type": "asset",
+            "url": "https://ambientcg.com/get?file=Bricks097_1K-JPG.zip"
         },
         {
             "name": "DayEnvironmentHDRI057_4K",
-            "type": "archive",
-            "url": "https://ambientcg.com/get?file=DayEnvironmentHDRI057_4K-TONEMAPPED.jpg",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+            "type": "asset",
+            "url": "https://ambientcg.com/get?file=DayEnvironmentHDRI057_4K-TONEMAPPED.jpg"
         }
     ]
 }
