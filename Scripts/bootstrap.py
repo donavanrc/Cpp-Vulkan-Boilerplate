@@ -98,7 +98,7 @@ def download_file(url, target_path, user_agent=None):
     headers = {'User-Agent': user_agent or USER_AGENT}
     try:
         os.makedirs(os.path.dirname(target_path), exist_ok=True)
-        request = urllib.request.Request(url, headers=headers)
+        request = urllib.request.Request(url.encode('ascii', 'ignore').decode(), headers=headers)
         with urllib.request.urlopen(request) as response:
             final_url = response.geturl()
             if final_url != url:
