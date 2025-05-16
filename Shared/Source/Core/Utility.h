@@ -27,3 +27,38 @@ namespace Utility
         return result;
     }
 }
+
+#ifdef _DEBUG
+#define PRINT_TAGGED(Tag, ...) \
+{ \
+    Utility::Printf("\n[%s] ", Tag); \
+    Utility::Printf(__VA_ARGS__); \
+    Utility::Printf("\n"); \
+}
+#define DEBUG_PRINT_TAGGED(Tag, ...) \
+{ \
+    PRINT_TAGGED(Tag, __VA_ARGS__); \
+    Utility::Printf("[%s:%d] ", __FILE__, __LINE__); \
+    Utility::Printf("\n"); \
+}
+#define DEBUG_ASSERT(Condition, ...) \
+{ \
+    if (!(Condition)) \
+    { \
+        DEBUG_PRINT_TAGGED("ASSERTION ERROR", __VA_ARGS__); \
+        std::abort(); \
+    } \
+}
+#define DEBUG_LOG(...) PRINT_TAGGED("LOG", __VA_ARGS__)
+#define DEBUG_ERROR(...) DEBUG_PRINT_TAGGED("ERROR", __VA_ARGS__)
+#define DEBUG_FATAL(...) DEBUG_PRINT_TAGGED("FATAL", __VA_ARGS__)
+#define DEBUG_WARNING(...) DEBUG_PRINT_TAGGED("WARNING", __VA_ARGS__)
+#else
+#define DEBUG_ASSERT(Condition, ...)
+#define DEBUG_LOG(...)
+#define DEBUG_ERROR(...)
+#define DEBUG_FATAL(...)
+#define DEBUG_WARNING(...)
+#endif
+
+#define CHECK(Condition, ...) if(!(Condition)) throw std::runtime_error(Utility::Format(__VA_ARGS__))

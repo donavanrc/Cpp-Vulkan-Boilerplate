@@ -1,26 +1,32 @@
-#include "Main/Main.h"
+#include "pch.h"
 
-class HelloWorld : public MainApplication
+class HelloWorldApp
 {
 public:
-    void Initialize() override;
-    void Run() override;
+    void Initialize();
 };
 
-void HelloWorld::Initialize()
+void HelloWorldApp::Initialize()
 {
-    DEBUG_CRITICAL("Critical error message");
-    DEBUG_DISPLAY("Display message");
-    DEBUG_ERROR("Error message");
-    DEBUG_INFO("Info message");
-    DEBUG_LOG("Log message");
-    DEBUG_WARNING("Warning message");
-    DEBUG_TRACE("Trace message");
-    DEBUG_ASSERT(false, "Assertion error message");
+    DEBUG_LOG("This is a message");
+    DEBUG_WARNING("This is a warning");
+    DEBUG_ERROR("This is a error");
+    CHECK(false, "This is a fatal error");
 }
 
-void HelloWorld::Run()
+int main()
 {
+    try 
+    {
+        HelloWorldApp app;
+        app.Initialize();
+    }
+    catch(const std::exception& Exception)
+    {
+        DEBUG_FATAL(Exception.what());
+        DEBUG_ASSERT(false, "This is assertion error");
+        return EXIT_FAILURE;
+    }
+    
+    return EXIT_SUCCESS;
 }
-
-START_APPLICATION(HelloWorld)
